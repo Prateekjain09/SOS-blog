@@ -70,17 +70,18 @@
                     </div>
                     
           <h1 class="mb-4" >{{posts.title}}</h1>
-          
-         
+          {% for tag in posts.tags.all %}
+          <a class="category mb-5" href="{{tag.get_absolute_url}}">{{tag}}</a> 
+         {% endfor %}
           <div class="post-content-body">
           <div class="row mb-5">
             <div class="col-md-12 mb-4">
             <!--  <img src="images/blog1_2.jpg" alt="Image placeholder" class="img-fluid"> -->
-            {{ object.content}}
+            {{ object.content|safe}} <!-- safe is neccesaary for editor -->
             <img src="{{posts.image2.url}}">
-            {{ object.content2}}
+            {{ object.content2|safe}}
             <img src="{{posts.image3.url}}">
-            {{ object.content3}}
+            {{ object.content3|safe}}
             </div>
           </div>
        
@@ -102,7 +103,7 @@
               </div>
             </div>
           </div>
-
+         
           <footer class="site-footer">
             <div class="container">
               <div class="row mb-5">

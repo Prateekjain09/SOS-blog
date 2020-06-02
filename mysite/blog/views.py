@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import posts
+from .models import posts,tags
 
 class PostList(generic.ListView):
     queryset= posts.objects.order_by('-created_on')
@@ -15,4 +15,10 @@ class contact(generic.ListView):
 class home(generic.ListView):
     queryset= posts.objects.order_by('-created_on')
     template_name='home.html'
+class taglist(generic.ListView):
+     model=posts
+     template_name='tags.html'
+     def get_queryset(self,**kwargs):
+          pk = self.kwargs['pk']
+          return posts.objects.filter(tags=pk)
 # Create your views here.
