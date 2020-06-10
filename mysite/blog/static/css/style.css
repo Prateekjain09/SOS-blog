@@ -36,14 +36,14 @@ header {
   header .navbar-brand {
     text-transform: uppercase;
     letter-spacing: .2em;
-    font-weight: 400;
+    font-weight: bold;
     color: #fff !important; }
   header .navbar-collapse {
     position: relative; }
   header .navbar {
     padding-top: 0;
     padding-bottom: 0;
-    background: transparent !important; }
+     }
     @media (max-width: 767.98px) {
       header .navbar {
         background: #e6e6e6 !important; } }
@@ -59,7 +59,9 @@ header {
       font-size: 16px;
       outline: none !important;
       text-transform: uppercase;
-      letter-spacing: .05em; }
+      letter-spacing: .05em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
       @media (max-width: 991.98px) {
         header .navbar .nav-link {
           padding: 1.7rem 1rem; } }
