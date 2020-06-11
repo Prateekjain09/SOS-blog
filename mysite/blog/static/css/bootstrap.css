@@ -3230,7 +3230,7 @@ input[type="button"].btn-block {
   list-style: none; }
 
 .nav-link {
-  display: block;
+  display: inline;
   padding: 0.5rem 1rem; }
   .nav-link:hover, .nav-link:focus {
     text-decoration: none; }
@@ -6364,9 +6364,9 @@ button.bg-dark:focus {
 .my-auto {
   margin-top: auto !important; }
 
-.mr-auto,
+/* .mr-auto,
 .mx-auto {
-  margin-right: auto !important; }
+  margin-right: None !important; } */
 
 .mb-auto,
 .my-auto {
